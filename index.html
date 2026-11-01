@@ -1,583 +1,1456 @@
 <!DOCTYPE html>
-<html lang="zh-Hant-TW">
+
+<html class="scroll-smooth" lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>把資歷變資產企業內訓</title>
-<meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Ginger 林逸蓁《把資歷變資產》企業內訓工作坊：將優秀員工的經驗變成可複製的組織資產，並校準員工的動機與企業的目標。">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@500;700;900&display=swap">
-<script src="https://cdn.tailwindcss.com/3.4.17"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          ink: '#0B0F19', ink2: '#111827', amber: { DEFAULT: '#F59E0B' }, gold: '#D4AF37', cream: '#F5EEDC', mute: '#9AA3B5'
-        },
-        fontFamily: {
-          serif: ['"Noto Serif TC"', '"Songti TC"', 'serif'],
-          sans: ['"Noto Sans TC"', '"PingFang TC"', '"Microsoft JhengHei"', 'sans-serif'],
-          num: ['"Cormorant Garamond"', '"Noto Serif TC"', 'serif']
-        }
-      }
-    }
-  }
-</script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>企業動態人財戰略一日實戰工作坊 ＆ 企內專題演講 ｜ 扶輪社 ＆ BNI 企業主專屬專案</title>
+<meta content="別讓員工的年資變成企業的負債！專為扶輪社與 BNI 中小企業主設計：透過「高階一日動態人財工作坊」深入體驗 OAD 行為科學標竿複製價值；或邀請《把資歷變資產》暢銷書作者 Ginger 顧問進行「全員成為資產型人才」企內專題分享，徹底打通招募、主管升遷與團隊內耗！" name="description"/>
+<!-- 字型引進：思源宋體、思源黑體、Cormorant Garamond 英文襯線 -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@500;600;700;900&amp;display=swap" rel="stylesheet"/>
 <style>
-  /* Layout: a dark boardroom ledger — gold hairlines, glass panels, numbers set like an annual report */
-  :root {
-    --ink: #0B0F19; --ink-2: #111827; --gold: #D4AF37; --amber: #F59E0B;
-    --cream: #F5EEDC; --mute: #9AA3B5; --line: rgba(212,175,55,.22);
-    color-scheme: dark;
-  }
-  html { scroll-behavior: smooth; }
-  body { background: var(--ink); color: var(--cream); font-family: "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; font-size: 16px; line-height: 1.75; letter-spacing: .02em; -webkit-font-smoothing: antialiased; }
-  .gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-  h1,h2,h3,blockquote,summary { text-wrap: balance; }
-  p, li, figcaption { text-wrap: pretty; }
-  .bal { text-wrap: balance; }
-  .ph { display: inline-block; }
-  .glass { background: linear-gradient(160deg, rgba(255,255,255,.06), rgba(255,255,255,.02)); border: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-  .glass-gold { background: linear-gradient(160deg, rgba(212,175,55,.12), rgba(245,158,11,.03)); border: 1px solid rgba(212,175,55,.45); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
-  .gold-text { background: linear-gradient(100deg, #F7E7A6 0%, #D4AF37 45%, #F59E0B 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .eyebrow { font-size: .75rem; letter-spacing: .32em; text-transform: uppercase; color: var(--gold); }
-  .hair { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
-  .num { font-family: "Cormorant Garamond","Noto Serif TC",serif; font-variant-numeric: tabular-nums lining-nums; }
-  .tabnum { font-variant-numeric: tabular-nums; }
-  .btn-gold { background: linear-gradient(100deg, #E9C766, #D4AF37 45%, #F59E0B); color: #1A1305; font-weight: 700; letter-spacing: .08em; box-shadow: 0 10px 30px -10px rgba(245,158,11,.55); transition: transform .2s, box-shadow .2s; }
-  .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 16px 40px -12px rgba(245,158,11,.75); }
-  .btn-ghost { border: 1px solid rgba(212,175,55,.5); color: var(--cream); letter-spacing: .08em; transition: background .2s, border-color .2s; }
-  .btn-ghost:hover { background: rgba(212,175,55,.1); border-color: var(--gold); }
-  a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+    :root {
+      /* 黑曜石金緻奢華旗艦風 (Full Dark Luxury Palette) */
+      --bg: #0A0C10;
+      --bg-card: #121620;
+      --bg-card-alt: #161B26;
+      --bg-card-highlight: #1B2232;
+      --gold: #D4AF37;
+      --gold-deep: #F1D487;
+      --gold-light: #F8E8A2;
+      --gold-dark: #A8823F;
+      --emerald: #10B981;
+      --emerald-light: #34D399;
+      --text: #FFFFFF;
+      --text-body: #DCDFE8;
+      --text-muted: #9AA0B2;
+      --line: rgba(212, 175, 55, 0.32);
+      --line-soft: rgba(255, 255, 255, 0.08);
+      --shadow: 0 20px 48px rgba(0, 0, 0, 0.65);
+      --radius: 8px;
+      --maxw: 1200px;
+      --serif: "Noto Serif TC", "Noto Serif", Georgia, serif;
+      --sans: "Noto Sans TC", "Noto Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --lat: "Cormorant Garamond", var(--serif);
+    }
 
-  /* Ambient glow */
-  .aura { position: absolute; border-radius: 9999px; filter: blur(90px); pointer-events: none; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-  /* Range sliders */
-  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 999px; background: linear-gradient(90deg, var(--gold) var(--p,50%), rgba(255,255,255,.12) var(--p,50%)); outline: none; }
-  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #FFF3C4, #D4AF37 55%, #A67C00); border: 2px solid #0B0F19; box-shadow: 0 0 0 3px rgba(212,175,55,.35), 0 4px 12px rgba(0,0,0,.5); cursor: pointer; }
-  input[type=range]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: #D4AF37; border: 2px solid #0B0F19; box-shadow: 0 0 0 3px rgba(212,175,55,.35); cursor: pointer; }
-  .numfield { background: rgba(0,0,0,.35); border: 1px solid rgba(212,175,55,.3); color: var(--cream); border-radius: 10px; padding: .35rem .6rem; width: 6.5rem; text-align: right; font-variant-numeric: tabular-nums; }
+    body {
+      background-color: var(--bg);
+      color: var(--text-body);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.85;
+      -webkit-font-smoothing: antialiased;
+    }
 
-  /* Book cover (transparent 3D mockup) */
-  .book img { display: block; width: 100%; height: auto; max-width: 100%; filter: drop-shadow(0 30px 40px rgba(0,0,0,.65)) drop-shadow(0 0 50px rgba(212,175,55,.28)); }
+    h1, h2, h3, h4, h5 {
+      font-family: var(--serif);
+      color: var(--text);
+      font-weight: 700;
+      line-height: 1.35;
+    }
 
-  /* Photo frame */
-  .frame { position: relative; border-radius: 28px; padding: 3px; background: linear-gradient(150deg, #F7E7A6, #D4AF37 40%, rgba(212,175,55,.15) 70%, #F59E0B); box-shadow: 0 0 60px -10px rgba(212,175,55,.55), 0 0 120px -30px rgba(245,158,11,.45); }
-  .frame img { display: block; border-radius: 25px; width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 22%; max-width: 100%; }
+    p { margin-bottom: 1.25rem; }
+    p:last-child { margin-bottom: 0; }
+    a { color: inherit; text-decoration: none; }
 
-  .pulse { animation: pulse 2.6s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { text-shadow: 0 0 24px rgba(245,158,11,.35); } 50% { text-shadow: 0 0 48px rgba(245,158,11,.7); } }
-  .bump { animation: bump .35s ease; }
-  @keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.035); } 100% { transform: scale(1); } }
+    .wrap {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
 
-  details > summary { list-style: none; cursor: pointer; }
-  details > summary::-webkit-details-marker { display: none; }
-  details[open] .chev { transform: rotate(180deg); }
-  .chev { transition: transform .25s; }
+    /* 頂部導覽列 HEADER */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(10, 12, 16, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--line);
+      transition: all 0.3s ease;
+    }
 
-  .timeline-row { display: grid; grid-template-columns: 5.5rem 1fr; gap: 1rem; }
-  @media (max-width: 480px) { .timeline-row { grid-template-columns: 4.5rem 1fr; gap: .75rem; } }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
 
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    .pulse, .bump { animation: none !important; }
-    .btn-gold, .btn-ghost { transition: none; }
-  }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-logo-img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-tag {
+      font-size: 11px;
+      letter-spacing: 0.8px;
+      padding: 4px 10px;
+      background: rgba(212, 175, 55, 0.12);
+      border: 1px solid var(--line);
+      color: var(--gold-deep);
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14.5px;
+      font-weight: 500;
+      color: #E2E8F0;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold-light);
+    }
+
+    /* 按鈕樣式 (高清晰黑金配色) */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 28px;
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      text-align: center;
+      border: none;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #F8E8A2 0%, #D4AF37 50%, #B88E28 100%);
+      color: #0A0C10 !important;
+      box-shadow: 0 4px 18px rgba(212, 175, 55, 0.35);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(212, 175, 55, 0.5);
+      background: linear-gradient(135deg, #FFFFFF 0%, #E6CA75 50%, #D4AF37 100%);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold-deep);
+      border: 1px solid var(--line);
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.1);
+      border-color: var(--gold-deep);
+      color: #FFFFFF;
+    }
+
+    /* 區塊標準樣式 */
+    .section {
+      padding: 96px 0;
+      position: relative;
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto 56px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      color: var(--gold-deep);
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      padding: 4px 12px;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 30px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .section-title {
+      font-size: 36px;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+    }
+
+    .section-desc {
+      font-size: 16.5px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* 金色文字漸層 */
+    .gold-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F1D487 40%, #D4AF37 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* HERO 旗艦首頁區塊 */
+    .hero {
+      padding: 90px 0 80px;
+      background: radial-gradient(circle at 50% 18%, rgba(212, 175, 55, 0.12) 0%, rgba(10, 12, 16, 0.95) 70%);
+      border-bottom: 1px solid var(--line-soft);
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      max-width: 960px;
+      margin: 0 auto 24px;
+      line-height: 1.35;
+      font-weight: 900;
+    }
+
+    .hero-lead {
+      font-size: 18px;
+      max-width: 840px;
+      margin: 0 auto 36px;
+      color: var(--text-body);
+      line-height: 1.85;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    /* 4 大核心特色標籤卡片 */
+    .hero-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      max-width: 1040px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .hero-feat-card {
+      background: rgba(18, 22, 32, 0.7);
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      padding: 16px 18px;
+      transition: all 0.3s ease;
+    }
+
+    .hero-feat-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .hero-feat-title {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .hero-feat-val {
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* 痛點卡片網格 */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .pain-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      padding: 32px 28px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .pain-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .pain-num {
+      display: inline-block;
+      font-family: var(--lat);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--gold-deep);
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .pain-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #FFFFFF;
+    }
+
+    .pain-quote {
+      font-size: 14.5px;
+      color: #F87171;
+      background: rgba(239, 68, 68, 0.08);
+      border-left: 3px solid #EF4444;
+      padding: 8px 12px;
+      margin-bottom: 12px;
+      border-radius: 0 4px 4px 0;
+      font-style: italic;
+    }
+
+    .pain-card p {
+      font-size: 14.5px;
+      color: var(--text-body);
+      line-height: 1.7;
+    }
+
+    /* 企業人財損失試算機 */
+    .calculator-box {
+      background: linear-gradient(135deg, rgba(18, 22, 32, 0.95) 0%, rgba(22, 27, 38, 0.9) 100%);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .calc-control {
+      margin-bottom: 24px;
+    }
+
+    .calc-control:last-child {
+      margin-bottom: 0;
+    }
+
+    .calc-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .calc-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .calc-val {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--gold-deep);
+      font-family: var(--lat);
+    }
+
+    .calc-slider {
+      width: 100%;
+      height: 6px;
+      background: #2D3748;
+      border-radius: 3px;
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+
+    .calc-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.2);
+    }
+
+    .calc-result-panel {
+      background: rgba(10, 12, 16, 0.8);
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .calc-result-title {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .calc-result-number {
+      font-family: var(--lat);
+      font-size: 42px;
+      font-weight: 700;
+      color: #F87171;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+
+    .calc-result-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .calc-contrast {
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px dashed var(--gold);
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 13px;
+      color: var(--gold-light);
+      line-height: 1.6;
+    }
+
+    /* 兩大專案合作路徑 (雙軌展示) */
+    .tracks-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .track-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line-soft);
+      border-radius: 12px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .track-card.highlight {
+      border: 2px solid var(--gold);
+      background: linear-gradient(180deg, rgba(22, 27, 38, 0.95) 0%, rgba(18, 22, 32, 0.95) 100%);
+      box-shadow: 0 12px 40px rgba(212, 175, 55, 0.15);
+    }
+
+    .track-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .track-badge-gold {
+      background: linear-gradient(135deg, #D4AF37, #B88E28);
+      color: #0A0C10;
+    }
+
+    .track-badge-blue {
+      background: rgba(59, 130, 246, 0.15);
+      border: 1px solid rgba(59, 130, 246, 0.4);
+      color: #60A5FA;
+    }
+
+    .track-card h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .track-card .track-for {
+      font-size: 13.5px;
+      color: var(--gold-deep);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    .track-card .track-desc {
+      font-size: 14.5px;
+      color: var(--text-body);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .track-card ul {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .track-card ul li {
+      font-size: 14px;
+      color: var(--text-body);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.6;
+    }
+
+    .track-card ul li::before {
+      content: "✓";
+      color: var(--gold);
+      font-weight: bold;
+      flex-shrink: 0;
+    }
+
+    .track-bottom {
+      border-top: 1px solid var(--line-soft);
+      padding-top: 24px;
+    }
+
+    /* 一日工作坊實戰模組 */
+    .workshop-modules {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+
+    .module-card {
+      background: var(--bg-card);
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      padding: 24px 20px;
+      transition: all 0.3s ease;
+    }
+
+    .module-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    .mod-tag {
+      font-family: var(--lat);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold-deep);
+      margin-bottom: 8px;
+    }
+
+    .module-card h4 {
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: #FFFFFF;
+    }
+
+    .module-card p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* 課程時程表 (黑金風) */
+    .schedule-box {
+      background: var(--bg-card);
+      border: 1px solid var(--line-soft);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 140px 1fr 200px;
+      gap: 20px;
+      padding: 18px 24px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      align-items: center;
+      font-size: 14.5px;
+    }
+
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-row.lunch {
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-muted);
+    }
+
+    .sch-time {
+      font-family: var(--lat);
+      font-weight: 700;
+      color: var(--gold-deep);
+      font-size: 15px;
+    }
+
+    .sch-title {
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    .sch-output {
+      font-size: 12.5px;
+      color: var(--emerald-light);
+      background: rgba(16, 185, 129, 0.1);
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    /* 顧問介紹區塊 */
+    .coach-card {
+      background: linear-gradient(135deg, rgba(18, 22, 32, 0.95) 0%, rgba(22, 27, 38, 0.95) 100%);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .coach-photo-wrap {
+      text-align: center;
+    }
+
+    .coach-photo {
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+      margin-bottom: 16px;
+    }
+
+    .coach-name {
+      font-size: 26px;
+      margin-bottom: 4px;
+    }
+
+    .coach-sub {
+      font-size: 14px;
+      color: var(--gold-deep);
+      font-weight: 600;
+    }
+
+    .coach-creds {
+      list-style: none;
+      margin: 18px 0;
+    }
+
+    .coach-creds li {
+      font-size: 14px;
+      color: var(--text-body);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .coach-creds li::before {
+      content: "◆";
+      color: var(--gold);
+      font-size: 11px;
+    }
+
+    /* 表單區塊 */
+    .booking-section {
+      background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, rgba(10, 12, 16, 0.98) 80%);
+      border-top: 1px solid var(--line);
+    }
+
+    .booking-form-box {
+      max-width: 800px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #E2E8F0;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(10, 12, 16, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 11px 14px;
+      color: #FFFFFF;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      background: rgba(10, 12, 16, 0.95);
+    }
+
+    .form-msg {
+      display: none;
+      padding: 14px;
+      border-radius: 6px;
+      margin-top: 16px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .form-msg.success {
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid var(--emerald);
+      color: var(--emerald-light);
+    }
+
+    .form-msg.error {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid #EF4444;
+      color: #F87171;
+    }
+
+    /* 頁尾 FOOTER (雙品牌尊榮呈獻) */
+    .site-footer {
+      background: #060709;
+      border-top: 1px solid var(--line);
+      padding: 60px 0 40px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 32px;
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--line-soft);
+    }
+
+    .footer-brand-wrap {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-logo-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-logo-img {
+      height: 42px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    /* 懸浮預約按鈕 */
+    .sticky-cta {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 990;
+    }
+
+    /* 響應式佈局 */
+    @media (max-width: 992px) {
+      .hero h1 { font-size: 36px; }
+      .hero-features { grid-template-columns: 1fr 1fr; }
+      .pain-grid { grid-template-columns: 1fr; }
+      .calc-grid { grid-template-columns: 1fr; }
+      .tracks-grid { grid-template-columns: 1fr; }
+      .workshop-modules { grid-template-columns: 1fr 1fr; }
+      .coach-card { grid-template-columns: 1fr; text-align: center; }
+      .coach-photo-wrap { margin: 0 auto; }
+      .coach-creds li { justify-content: center; }
+      .schedule-row { grid-template-columns: 1fr; gap: 8px; }
+      .sch-output { text-align: left; display: inline-block; width: fit-content; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 28px; }
+      .hero-features { grid-template-columns: 1fr; }
+      .workshop-modules { grid-template-columns: 1fr; }
+      .form-grid { grid-template-columns: 1fr; }
+      .brand-tag { display: none; }
+    }
+  </style>
+<style id="mobile-typo">
+h1,h2,h3,h4,blockquote,summary{text-wrap:balance}
+p,li,td,th,figcaption,label,dd{text-wrap:pretty}
+.ph{display:inline-block}
+.track-card ul li,.coach-creds li{display:block; position:relative; padding-left:22px}
+.track-card ul li::before,.coach-creds li::before{position:absolute; left:0; top:0}
+.coach-creds li::before{top:3px}
+footer .nav-links{flex-wrap:wrap; row-gap:8px !important; justify-content:center}
+footer .nav-links a{white-space:nowrap}
+@media (max-width:640px){
+  .wrap{padding-left:18px; padding-right:18px}
+  .section-title{font-size:23px; letter-spacing:0; line-height:1.45}
+  .hero h1{font-size:26px !important; line-height:1.45}
+  .track-card h3{font-size:18px; line-height:1.45}
+  .coach-name{font-size:23px}
+  .calc-result-number{font-size:32px}
+  h2[style*="font-size: 28px"]{font-size:19px !important; line-height:1.5}
+  .coach-creds{text-align:left}
+  .booking-form-box{padding:28px 20px !important}
+  .btn{white-space:normal}
+}
+.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.form-group input,.form-group select,.form-group textarea{width:100%; min-width:0}
+.calc-val{white-space:nowrap; flex-shrink:0}
+@media (max-width:640px){
+  .form-grid{grid-template-columns:minmax(0,1fr) !important}
+  .track-bottom > div:first-child{flex-wrap:wrap; gap:4px 12px}
+  .track-bottom > div:first-child span{white-space:nowrap}
+}
+
 </style>
-
 </head>
 <body>
-<div class="relative overflow-x-hidden">
-
-  <!-- ============ HEADER ============ -->
-  <header class="sticky z-40 gutter border-b border-white/5 bg-[#0B0F19]/80 backdrop-blur-md" style="top: env(safe-area-inset-top, 0px);">
-    <div class="max-w-6xl mx-auto flex items-center justify-between py-3 gap-4">
-      <a href="#top" class="flex items-center gap-3 min-w-0">
-        <span class="w-9 h-9 shrink-0 rounded-full grid place-items-center border border-[#D4AF37]/60 text-[#D4AF37] font-serif font-bold">資</span>
-        <span class="leading-tight min-w-0">
-          <span class="block font-serif font-bold tracking-wider text-[15px] truncate">把資歷變資產</span>
-          <span class="block text-[11px] text-[#9AA3B5] tracking-[.2em] truncate">GINGER 林逸蓁 ・ 企業內訓工作坊</span>
-        </span>
-      </a>
-      <nav class="hidden lg:flex items-center gap-6 text-sm text-[#9AA3B5]">
-        <a href="#pain" class="hover:text-[#F5EEDC]">老闆的痛點</a>
-        <a href="#layers" class="hover:text-[#F5EEDC]">員工的痛點</a>
-        <a href="#calculator" class="hover:text-[#F5EEDC]">隱形成本</a>
-        <a href="#deliverables" class="hover:text-[#F5EEDC]">三大成果</a>
-        <a href="#coach" class="hover:text-[#F5EEDC]">Why Ginger</a>
-        <a href="#faq" class="hover:text-[#F5EEDC]">常見問題</a>
-      </nav>
-      <a href="#plans" class="btn-gold rounded-full px-4 py-2 text-sm shrink-0">合作方案</a>
-    </div>
-  </header>
-
-  <!-- ============ HERO ============ -->
-  <section id="top" class="relative gutter pt-14 pb-20 md:pt-24 md:pb-28">
-    <div class="aura w-[520px] h-[520px] bg-[#F59E0B]/15 -top-40 -right-40"></div>
-    <div class="aura w-[420px] h-[420px] bg-[#D4AF37]/10 top-60 -left-40"></div>
-
-    <div class="relative max-w-6xl mx-auto">
-      <div class="min-w-0 max-w-3xl">
-        <h1 class="font-serif font-black text-[2rem] leading-[1.35] sm:text-5xl sm:leading-[1.3] lg:text-[3.2rem] tracking-wide">
-          您有這樣的<span class="gold-text">困擾嗎？</span>
-        </h1>
-        <ul class="mt-8 flex flex-col gap-3 max-w-[38em]">
-          <li class="glass rounded-2xl px-5 py-4 flex gap-4 items-start"><i data-lucide="users-round" class="w-6 h-6 text-[#D4AF37] shrink-0 mt-0.5"></i><span class="bal font-serif font-bold text-lg sm:text-xl leading-snug">公司的業績，是不是靠那幾個人撐著？</span></li>
-          <li class="glass rounded-2xl px-5 py-4 flex gap-4 items-start"><i data-lucide="user-minus" class="w-6 h-6 text-[#D4AF37] shrink-0 mt-0.5"></i><span class="bal font-serif font-bold text-lg sm:text-xl leading-snug">如果明天那幾個關鍵人不在，<br class="sm:hidden">公司還剩下什麼？</span></li>
-          <li class="glass-gold rounded-2xl px-5 py-4 flex gap-4 items-start"><i data-lucide="sprout" class="w-6 h-6 text-[#F59E0B] shrink-0 mt-0.5"></i><span class="bal font-serif font-bold text-lg sm:text-xl leading-snug">公司交出去之後，還能自己長大嗎？</span></li>
-        </ul>
-        <p class="mt-8 text-[17px] sm:text-lg text-[#C9CFDA] max-w-[38em] leading-[1.9]">
-          公司看得見的是「資歷」：年資、職稱、上一季的業績；但真正撐起業績的判斷、客戶關係與做事方法，往往只存在少數人的腦袋裡，沒有被留下，也沒有被持續檢視。
-        </p>
-        <p class="mt-4 text-[17px] sm:text-lg text-[#C9CFDA] max-w-[38em] leading-[1.9]">
-          用一天的企業內訓，把優秀員工的經驗變成可複製的<strong class="text-[#F5EEDC]">組織資產</strong>，並校準<strong class="text-[#F5EEDC]">員工的動機與企業的目標</strong>。讓業績不再只靠少數人撐著，公司交出去之後，也能自己長大。
-        </p>
-
-        <div class="mt-9 flex flex-col sm:flex-row gap-3">
-          <a href="#plans" class="btn-gold rounded-full px-7 py-4 text-center inline-flex items-center justify-center gap-2">
-            <i data-lucide="building-2" class="w-5 h-5"></i>查看企業合作方案
-          </a>
-          <a href="#calculator" class="btn-ghost rounded-full px-7 py-4 text-center inline-flex items-center justify-center gap-2">
-            <i data-lucide="calculator" class="w-5 h-5 text-[#D4AF37]"></i>算算人才錯位的代價
-          </a>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="relative max-w-6xl mx-auto mt-14 grid grid-cols-1 md:grid-cols-3 gap-4">
-      <div class="glass rounded-2xl p-5 flex gap-4 items-start">
-        <i data-lucide="users" class="w-6 h-6 text-[#D4AF37] shrink-0 mt-1"></i>
-        <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#9AA3B5]">適合對象</p><p class="font-bold mt-1">企業主・主管・業務團隊</p></div>
-      </div>
-      <div class="glass-gold rounded-2xl p-5 flex gap-4 items-start">
-        <i data-lucide="hourglass" class="w-6 h-6 text-[#F59E0B] shrink-0 mt-1"></i>
-        <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#D4AF37]">老闆得到的</p><p class="font-bold mt-1">業績不再只靠少數人</p><p class="text-sm text-[#C9CFDA]">優秀員工的做法，變成團隊的標準</p></div>
-      </div>
-      <div class="glass rounded-2xl p-5 flex gap-4 items-start">
-        <i data-lucide="presentation" class="w-6 h-6 text-[#D4AF37] shrink-0 mt-1"></i>
-        <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#9AA3B5]">授課形式</p><p class="font-bold mt-1">企業包班內訓</p><p class="text-sm text-[#9AA3B5]">半日／全日，可依需求客製</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ OWNER PAIN ============ -->
-  <section id="pain" class="gutter py-20 md:py-28 bg-gradient-to-b from-[#0B0F19] via-[#0F1422] to-[#0B0F19] border-y border-white/5">
-    <div class="max-w-6xl mx-auto grid lg:grid-cols-[.9fr_1.1fr] gap-10 lg:gap-16 items-start">
-      <div class="lg:sticky lg:top-28 min-w-0">
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl leading-snug">這幾句話，<br>你在公司聽過幾次？</h2>
-      </div>
-      <div class="flex flex-col gap-4 min-w-0">
-        <div class="glass-gold rounded-2xl p-6 flex gap-5">
-          <i data-lucide="phone-call" class="w-7 h-7 text-[#F59E0B] shrink-0"></i>
-          <div><h3 class="font-bold text-lg"><span class="ph">「我一出國，</span><span class="ph">公司就打電話打不停。」</span></h3><p class="text-[#C9CFDA] mt-1">大小決定都要等老闆或主管點頭，關鍵做法只存在少數人的腦袋裡。老闆走不開，主管也被綁住，公司的規模就卡在老闆的時間上。</p></div>
-        </div>
-        <div class="glass rounded-2xl p-6 flex gap-5">
-          <i data-lucide="door-open" class="w-7 h-7 text-[#D4AF37] shrink-0"></i>
-          <div><h3 class="font-bold text-lg"><span class="ph">「資深員工一走，</span><span class="ph">客戶和做法也跟著走了。」</span></h3><p class="text-[#9AA3B5] mt-1">經驗沒有變成制度、流程與可傳承的方法，人一離開就歸零。新人只能從頭摸索，公司一再為同一件事付學費。</p></div>
-        </div>
-        <div class="glass rounded-2xl p-6 flex gap-5">
-          <i data-lucide="trending-down" class="w-7 h-7 text-[#D4AF37] shrink-0"></i>
-          <div><h3 class="font-bold text-lg"><span class="ph">「業務第一名，</span><span class="ph">升主管後，</span><span class="ph">團隊業績反而掉。」</span></h3><p class="text-[#9AA3B5] mt-1">超級業務和業務教練，是兩種完全不同的行為驅動模式。誰業績好就升誰，常常是少了一位頂尖業務，多了一位痛苦的主管。</p></div>
-        </div>
-        <div class="glass rounded-2xl p-6 flex gap-5">
-          <i data-lucide="repeat" class="w-7 h-7 text-[#D4AF37] shrink-0"></i>
-          <div><h3 class="font-bold text-lg"><span class="ph">「訓練課程結束之後，</span><span class="ph">什麼都沒變。」</span></h3><p class="text-[#9AA3B5] mt-1">上課熱血三天，回到現場又照舊。員工不覺得學這些跟自己有關，主管也沒有具體的方法和檢核點，效果撐不過兩週。</p></div>
-        </div>
-        <figure class="mt-4 border-l-2 border-[#D4AF37] pl-5">
-          <blockquote class="font-serif text-xl sm:text-2xl leading-relaxed text-[#F5EEDC]"><span class="ph">「問題爆發的那一天，</span><span class="ph">從來不是問題開始的那一天。」</span></blockquote>
-          <figcaption class="mt-2 text-sm text-[#6B7385]">──《把資歷變資產》第 13 章</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ EMPLOYEE 3 LAYERS ============ -->
-  <section id="layers" class="gutter py-20 md:py-28">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto">
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl leading-snug">員工說出口的，<br><span class="gold-text">往往不是真正的問題</span></h2>
-        <p class="mt-4 text-[#9AA3B5]">員工的痛點有三層。主管多半只處理最上面那一層，所以補了人、加了薪，人還是留不住，經驗也不願意交出來。</p>
-      </div>
-
-      <div class="mt-14 flex flex-col gap-4">
-        <div class="glass rounded-3xl p-6 sm:p-8 grid md:grid-cols-[13rem_1fr_1fr] gap-4 md:gap-8 items-start">
-          <div><p class="eyebrow">第一層 ・ 表層</p><h3 class="mt-2 font-serif font-bold text-xl">工作事務</h3></div>
-          <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#9AA3B5]">員工說的</p><p class="mt-1"><span class="ph">人手不夠、工作量太大、</span><span class="ph">系統設備很難用。</span></p></div>
-          <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#F59E0B]">主管常見誤區</p><p class="mt-1 text-[#C9CFDA]"><span class="ph">只要解決員工反應的問題，</span><span class="ph">補人、優化系統，</span><span class="ph">就沒事了。</span></p></div>
-        </div>
-        <div class="glass rounded-3xl p-6 sm:p-8 grid md:grid-cols-[13rem_1fr_1fr] gap-4 md:gap-8 items-start md:ml-8">
-          <div><p class="eyebrow">第二層</p><h3 class="mt-2 font-serif font-bold text-xl">職涯與經濟</h3></div>
-          <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#9AA3B5]">員工感受到的</p><p class="mt-1"><span class="ph">薪酬、福利、獎金，</span><span class="ph">付出與回報不成正比。</span></p></div>
-          <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#F59E0B]">主管常見誤區</p><p class="mt-1 text-[#C9CFDA]"><span class="ph">以為員工只是計較錢，</span><span class="ph">試圖微幅加薪來安撫；</span><span class="ph">但他真正期待的，</span><span class="ph">可能並不在此。</span></p></div>
-        </div>
-        <div class="glass-gold rounded-3xl p-6 sm:p-8 grid md:grid-cols-[13rem_1fr_1fr] gap-4 md:gap-8 items-start md:ml-16">
-          <div><p class="eyebrow">第三層 ・ 最深</p><h3 class="mt-2 font-serif font-bold text-xl">情感與尊嚴</h3></div>
-          <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#D4AF37]">藏在心裡的</p><p class="mt-1"><span class="ph">不安全感、不被尊重，</span><span class="ph">內心深處的自我價值與尊嚴。</span></p></div>
-          <div class="min-w-0"><p class="text-xs tracking-[.2em] text-[#D4AF37]">例如</p><p class="mt-1 text-[#F5EEDC]"><span class="ph">抱怨沒有加班費的背後，</span><span class="ph">可能是每天回到家孩子都睡了，</span><span class="ph">覺得自己不是個愛孩子的父親。</span></p></div>
-        </div>
-      </div>
-      <p class="mt-10 text-center text-[#C9CFDA] max-w-[44em] mx-auto leading-[1.9]"><span class="ph">看懂第三層，</span><span class="ph">員工才會覺得被理解；</span><span class="ph">被理解的人，</span><span class="ph">才願意留下來，</span><span class="ph">也才願意把自己的經驗交出來。</span></p>
-    </div>
-  </section>
-
-<!-- ============ CALCULATOR ============ -->
-  <section id="calculator" class="relative gutter py-20 md:py-28 bg-gradient-to-b from-[#0B0F19] via-[#0F1422] to-[#0B0F19] border-y border-white/5">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto">
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl leading-snug"><span class="ph">人才錯位的</span><span class="ph">隱形成本計算機</span></h2>
-        <p class="mt-4 text-[#9AA3B5]">選錯、升錯或留不住一位關鍵人才，損失不會出現在損益表的某一行，卻真實地吃掉利潤。拖動滑桿，用你公司的數字算一次。</p>
-      </div>
-
-      <div class="mt-12 grid lg:grid-cols-2 gap-6 lg:gap-8">
-        <div class="glass rounded-3xl p-6 sm:p-8 flex flex-col gap-8 min-w-0">
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-3">
-              <label for="sal" class="font-medium">關鍵崗位平均月薪</label>
-              <div class="flex items-center gap-2 text-sm text-[#9AA3B5] whitespace-nowrap shrink-0"><input id="salN" type="number" class="numfield" min="30000" max="300000" step="5000" aria-label="關鍵崗位平均月薪數值">元</div>
-            </div>
-            <input id="sal" type="range" min="30000" max="300000" step="5000" value="60000">
-            <div class="flex justify-between text-xs text-[#6B7385] mt-2 tabnum"><span>3 萬</span><span>30 萬</span></div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-3">
-              <label for="ppl" class="font-medium"><span class="ph">一年內</span><span class="ph">選錯／升錯／流失的</span><span class="ph">關鍵人數</span></label>
-              <div class="flex items-center gap-2 text-sm text-[#9AA3B5] whitespace-nowrap shrink-0"><input id="pplN" type="number" class="numfield" min="1" max="30" step="1" aria-label="關鍵人數數值">人</div>
-            </div>
-            <input id="ppl" type="range" min="1" max="30" step="1" value="2">
-            <div class="flex justify-between text-xs text-[#6B7385] mt-2 tabnum"><span>1</span><span>30</span></div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between gap-3 mb-3">
-              <label for="mul" class="font-medium"><span class="ph">每一位的隱形成本</span><span class="ph">（約等於幾個月薪資）</span></label>
-              <div class="flex items-center gap-2 text-sm text-[#9AA3B5] whitespace-nowrap shrink-0"><input id="mulN" type="number" class="numfield" min="3" max="24" step="1" aria-label="月薪倍數數值">個月</div>
-            </div>
-            <input id="mul" type="range" min="3" max="24" step="1" value="6">
-            <div class="flex justify-between text-xs text-[#6B7385] mt-2 tabnum"><span>3</span><span>24</span></div>
-            <p class="mt-3 text-xs text-[#6B7385] leading-relaxed">包含招募與面試時間、新人培訓、職缺空窗的業績損失、主管救火時間，以及團隊士氣的折損。請依貴公司實際狀況調整。</p>
-          </div>
-        </div>
-
-        <div class="relative rounded-3xl p-6 sm:p-10 overflow-hidden border border-[#F59E0B]/40 bg-gradient-to-br from-[#1A1408] via-[#120F0A] to-[#0B0F19] flex flex-col min-w-0">
-          <div class="aura w-80 h-80 bg-[#F59E0B]/20 -top-24 -right-24"></div>
-          <div class="relative">
-            <p class="text-sm tracking-[.25em] text-[#D4AF37]">公司一年為人才錯位付出的隱形成本</p>
-            <p id="lossWrap" class="mt-4 font-num font-bold leading-none text-[#F59E0B] pulse break-all" style="font-size: clamp(3rem, 11vw, 5.6rem);">
-              <span class="text-[.45em] align-top mr-1">NT$</span><span id="loss" class="tabnum">720,000</span>
-            </p>
-            <p class="mt-3 text-sm text-[#9AA3B5] tabnum">
-              公式：月薪 <span id="fSal">60,000</span> × <span id="fMul">6</span> 個月 × <span id="fPpl">2</span> 人
-            </p>
-
-            <div class="hair my-7"></div>
-
-            <div class="flex items-start gap-3">
-              <i data-lucide="alert-triangle" class="w-5 h-5 text-[#F59E0B] shrink-0 mt-1"></i>
-              <p class="text-[#C9CFDA]">三年累積下來是 <strong class="text-[#F5EEDC] tabnum">NT$ <span id="threeYear">2,160,000</span></strong>，相當於 <strong class="text-[#F5EEDC] tabnum"><span id="headcount">3.0</span></strong> 位關鍵崗位整整一年的薪資。</p>
-            </div>
-
-            <div class="mt-7 glass rounded-2xl p-5">
-              <p class="leading-[1.9] text-[15px]">
-                這筆錢不會出現在損益表的任何一行，卻每年都在發生。與其事後補救，不如先把「誰適合什麼位置、主管該怎麼帶」看清楚。一場企業內訓的投資，通常遠低於選錯一位關鍵人才的代價。
-              </p>
-              <p class="mt-3 text-xs text-[#6B7385]">數字為估算工具，僅供企業內部評估參考。</p>
-            </div>
-
-            <a href="#plans" class="btn-gold mt-8 rounded-full px-7 py-4 inline-flex items-center justify-center gap-2 w-full sm:w-auto">
-              查看企業合作方案 <i data-lucide="arrow-right" class="w-5 h-5"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ DELIVERABLES ============ -->
-  <section id="deliverables" class="gutter py-20 md:py-28">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto">
-        <p class="eyebrow mb-4">Take-home Deliverables</p>
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl leading-snug"><span class="ph">主管團隊當天</span><span class="ph">帶回公司的 3 大成果</span></h2>
-      </div>
-
-      <div class="mt-12 grid md:grid-cols-3 gap-5">
-        <article class="glass rounded-3xl p-7 flex flex-col gap-4">
-          <div class="flex items-center gap-3"><span class="w-11 h-11 rounded-xl grid place-items-center bg-[#D4AF37]/15 border border-[#D4AF37]/40 shrink-0"><i data-lucide="archive" class="w-5 h-5 text-[#D4AF37]"></i></span><h3 class="font-serif font-bold text-xl">團隊七大資產盤點表</h3></div>
-          <p class="text-[#9AA3B5]">建立「資產型人才」觀念，盤點團隊的七大資產：哪些關鍵做法、客戶關係與判斷力，還只存在某個人的腦袋裡；哪些人一離開，公司就要重新付學費。</p>
-        </article>
-        <article class="glass-gold rounded-3xl p-7 flex flex-col gap-4">
-          <div class="flex items-center gap-3"><span class="w-11 h-11 rounded-xl grid place-items-center bg-[#D4AF37]/15 border border-[#D4AF37]/40 shrink-0"><i data-lucide="copy-check" class="w-5 h-5 text-[#F59E0B]"></i></span><h3 class="font-serif font-bold text-xl">NLP 複製卓越策略</h3></div>
-          <p class="text-[#C9CFDA]">把優秀員工「他就是會」的做法，萃取成其他人學得會、做得到的步驟。頂尖業務的成交力不再只屬於一個人，而是整個團隊都複製得了。</p>
-        </article>
-        <article class="glass rounded-3xl p-7 flex flex-col gap-4">
-          <div class="flex items-center gap-3"><span class="w-11 h-11 rounded-xl grid place-items-center bg-[#D4AF37]/15 border border-[#D4AF37]/40 shrink-0"><i data-lucide="flag" class="w-5 h-5 text-[#D4AF37]"></i></span><h3 class="font-serif font-bold text-xl">90 日團隊行動計畫</h3></div>
-          <p class="text-[#9AA3B5]">每位主管訂出一件「不需要自己在場也能完成」的事，搭配第 30／60／90 天檢核點。</p>
-        </article>
-      </div>
-
-
-      <div id="talent" class="mt-20">
-        <div class="text-center max-w-2xl mx-auto">
-          <h3 class="font-serif font-bold text-2xl sm:text-3xl leading-snug">資歷型人才 vs. <span class="gold-text">資產型人才</span></h3>
-          <p class="mt-3 text-[#9AA3B5]">同樣的年資，帶給公司的價值可以完全不同。</p>
-        </div>
-        <div class="mt-10 glass rounded-3xl overflow-hidden">
-          <div class="hidden md:grid md:grid-cols-[11rem_1fr_1fr] text-sm tracking-[.2em]">
-            <div class="px-5 py-4"></div>
-            <div class="px-5 py-4 text-[#9AA3B5] font-bold">資歷型人才</div>
-            <div class="px-5 py-4 text-[#1A1305] font-bold bg-gradient-to-r from-[#E9C766] to-[#D4AF37]">資產型人才</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="crosshair" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">自我定位</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>定位自己為「員工」，視工作為勞力換取薪水的單次交易。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>定位自己為「合作夥伴」，視公司為一個最大的研發贊助商與客戶。</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="target" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">核心目標</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>追求短期「損益表」的流量（如月薪、獎金），手停則錢停。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>追求長期「資產負債表」的增值，將資歷編碼成可持續產生價值的資產。</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="trending-up" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">努力模式</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>慣性「往前看」趨勢，缺什麼補什麼。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>透過「往後看」定錨願景，專注於具備溢價價值的「核心技術」。</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="star" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">價值呈現</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>強調名片上的公司光環與標準化「功能」。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>專注經營獨門絕活，並且能與服務的企業同步。</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="messages-square" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">組織溝通</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>盯著工作說明書（JD），把跨部門協作視為行政阻力。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>具備「經營者視野」，理解權力線與資源流，將協作轉化為「戰略的對齊」以及「資源的交換」。</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="shield-check" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">風險防禦</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>具有「單點依賴」的脆弱性。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>主動配置能力，在變動來臨前，做好準備。</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="bar-chart-3" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">專業發展</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>累積的是「年資的重複」，將 1 年的經驗重複 10 遍。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>累積的是「價值的堆疊」，確保專業具備高度轉移性與複利效應。</div>
-          </div>
-          <div class="grid md:grid-cols-[11rem_1fr_1fr] border-t border-white/10">
-            <div class="flex items-center gap-3 px-5 py-4 md:py-5 bg-white/[.02]"><i data-lucide="circle-alert" class="w-5 h-5 text-[#D4AF37] shrink-0"></i><span class="font-bold">危機應對</span></div>
-            <div class="px-5 pb-3 md:py-5 text-[#9AA3B5] text-[15px] leading-[1.8] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#6B7385] block mb-1">資歷型人才</span>容易陷入焦慮與自憐的「受害者心態」，逃避或究責，重心放在「為什麼是我」。</div>
-            <div class="px-5 pb-5 md:py-5 text-[#F5EEDC] text-[15px] leading-[1.8] bg-[#D4AF37]/[.06] min-w-0"><span class="md:hidden text-xs tracking-[.2em] text-[#D4AF37] block mb-1 pt-3">資產型人才</span>採取冷靜的「自省與復盤力」，重心放在「為何發生」與「如何解決」。</div>
-          </div>
-        </div>
-      </div>
-
-      <figure class="mt-14 glass rounded-3xl p-7 sm:p-10 text-center max-w-4xl mx-auto">
-        <blockquote class="font-serif text-2xl sm:text-3xl leading-snug"><span class="ph">公司要培養的，</span><span class="ph">不是勞務參與率，</span><br class="hidden sm:block"><span class="ph gold-text">而是價值持續率。</span></blockquote>
-        <figcaption class="mt-4 text-sm text-[#6B7385]">──《把資歷變資產》第 14 章</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ============ WHY GINGER ============ -->
-  <section id="coach" class="relative gutter py-20 md:py-28 bg-gradient-to-b from-[#0B0F19] via-[#0F1422] to-[#0B0F19] border-y border-white/5">
-    <div class="aura w-[460px] h-[460px] bg-[#D4AF37]/10 top-20 -left-40"></div>
-    <div class="relative max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto">
-        <p class="eyebrow mb-4">Why Ginger</p>
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl leading-snug">同時看懂老闆的焦慮，<br>和員工說不出口的事</h2>
-      </div>
-
-      <div class="mt-14 grid lg:grid-cols-[.8fr_1.2fr] gap-12 lg:gap-16 items-start">
-        <div class="max-w-[400px] w-full mx-auto lg:mx-0">
-          <div class="frame"><img src="ginger-profile.jpg" alt="工作坊引導人 Ginger 林逸蓁" loading="lazy"></div>
-          <div class="mt-6 grid grid-cols-3 gap-3 text-center">
-            <div class="glass rounded-xl py-3"><p class="num text-3xl font-bold text-[#D4AF37]">20<span class="text-lg">+</span></p><p class="text-[11px] text-[#9AA3B5] tracking-wider">年經營層幕僚</p></div>
-            <div class="glass rounded-xl py-3"><p class="num text-3xl font-bold text-[#D4AF37]">NLP</p><p class="text-[11px] text-[#9AA3B5] tracking-wider">專業執行師</p></div>
-            <div class="glass rounded-xl py-3"><p class="num text-3xl font-bold text-[#D4AF37]">GPHR</p><p class="text-[11px] text-[#9AA3B5] tracking-wider">HRCI 國際認證</p></div>
-          </div>
-        </div>
-
-        <div class="min-w-0">
-          <h3 class="font-serif font-black text-4xl sm:text-5xl tracking-wide">Ginger 林逸蓁</h3>
-          <p class="mt-3 text-lg text-[#D4AF37] tracking-[.08em] sm:tracking-[.2em]"><span class="ph">工作坊引導人 ・</span><span class="ph">《把資歷變資產》作者</span></p>
-
-          <div class="mt-8 flex flex-col gap-5 text-[#C9CFDA] leading-[1.95] max-w-[40em]">
-            <p class="flex gap-3"><i data-lucide="building-2" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-1.5"></i><span>在台灣大型集團擔任經營層幕僚超過 20 年，歷任<strong class="text-[#F5EEDC]">董事長特助、經營企劃主管及企業內部講師</strong>。站在經營者身邊，看過每一次人事決策背後的代價，也知道經營者如何評估人才、配置資源與放大價值。</span></p>
-            <p class="flex gap-3"><i data-lucide="sparkles" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-1.5"></i><span>長期擔任企業內部講師與 104 人力銀行職涯志工，聽過員工不會對老闆說的話，更透過 <strong class="text-[#F5EEDC]">NLP 從屬層級技術</strong>，校準老闆與員工的目標。與國際企業家導師 Dan Lok 合作推廣 <strong class="text-[#F5EEDC]">OAD 人才動態管理</strong>，以行為科學看見人與職位的落差，結合 Dan Lok 的高單價成交教練技巧，透過 AI 技術，具體告訴主管該如何帶領、指導每一位員工，以及如何指導員工成交顧客。</span></p>
-            <p class="flex gap-3"><i data-lucide="brain" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-1.5"></i><span>深度結合 NLP（神經語言程式學），以複製卓越策略把優秀員工的思維與做法，轉化為整個團隊都能使用的方法。</span></p>
-          </div>
-
-          <div class="hair my-9"></div>
-
-          <p class="text-sm tracking-[.25em] text-[#9AA3B5] mb-4">學歷與專業資格，對企業的意義</p>
-          <ul class="grid sm:grid-cols-2 gap-3">
-            <li class="glass rounded-xl px-4 py-4 flex gap-3 items-start"><i data-lucide="graduation-cap" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i><div class="min-w-0"><p class="bal text-sm font-bold text-[#F5EEDC]">國立臺灣師範大學 EMBA</p><p class="mt-1 text-sm text-[#9AA3B5] leading-relaxed">台灣第一個結合藝術與人文的 EMBA。管理是一門科學，亦是一門藝術，提供管理思考的彈性與人性。</p></div></li>
-            <li class="glass rounded-xl px-4 py-4 flex gap-3 items-start"><i data-lucide="graduation-cap" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i><div class="min-w-0"><p class="bal text-sm font-bold text-[#F5EEDC]">東吳大學日本語文學系、國際貿易學系雙學士</p><p class="mt-1 text-sm text-[#9AA3B5] leading-relaxed">理解日系企業重視細節與流程的管理文化，也熟悉跨國商務的溝通與往來。</p></div></li>
-            <li class="glass-gold rounded-xl px-4 py-4 flex gap-3 items-start"><i data-lucide="award" class="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5"></i><div class="min-w-0"><p class="bal text-sm font-bold text-[#F5EEDC]">HRCI 全球人力資源管理師（GPHR®）</p><p class="mt-1 text-sm text-[#9AA3B5] leading-relaxed">以國際通用的人資標準看人才策略，從人力規劃、組織發展到人才管理，協助企業做出經得起檢驗的用人決策。</p></div></li>
-            <li class="glass-gold rounded-xl px-4 py-4 flex gap-3 items-start"><i data-lucide="award" class="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5"></i><div class="min-w-0"><p class="bal text-sm font-bold text-[#F5EEDC]">ABNLP NLP 專業執行師</p><p class="mt-1 text-sm text-[#9AA3B5] leading-relaxed">協助老闆把腦中的願景與判斷標準，說成團隊聽得懂、做得到的語言，減少「講了很多次，他們還是不懂」的消耗。</p><p class="mt-1 text-sm text-[#9AA3B5] leading-relaxed">拆解優秀員工的思考順序與做事方法，也看得懂員工說不出口的動機，是「NLP 複製卓越策略」的方法基礎。</p></div></li>
-            <li class="glass rounded-xl px-4 py-4 flex gap-3 items-start"><i data-lucide="badge-check" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i><div class="min-w-0"><p class="bal text-sm font-bold text-[#F5EEDC]"><span class="ph">勞動部就業服務乙級技術士</span><span class="ph">＆ 就業服務專業人員</span></p><p class="mt-1 text-sm text-[#9AA3B5] leading-relaxed">熟悉就業服務相關法規與求職市場，在招募、任用與人才配置上兼顧效率與合規。</p></div></li>
-            <li class="glass rounded-xl px-4 py-4 flex gap-3 items-start"><i data-lucide="heart-handshake" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i><div class="min-w-0"><p class="bal text-sm font-bold text-[#F5EEDC]">104 人力銀行 Giver 職涯志工</p><p class="mt-1 text-sm text-[#9AA3B5] leading-relaxed">長期聆聽求職者與在職者的真實心聲，了解員工在工作、回報與尊嚴上真正在乎的事。</p></div></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PLANS ============ -->
-  <section id="plans" class="gutter py-20 md:py-28">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto">
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl leading-snug">合作方案</h2>
-      </div>
-
-      <div class="mt-14 grid lg:grid-cols-3 gap-6 items-stretch">
-        <article class="glass rounded-3xl p-6 sm:p-8 flex flex-col order-2 lg:order-1 min-w-0">
-          <span class="self-start text-xs tracking-[.2em] px-3 py-1 rounded-full border border-white/15 text-[#9AA3B5]">專題演講</span>
-          <h3 class="mt-5 font-serif font-bold text-2xl leading-snug">企業分享</h3>
-          <p class="mt-3 text-[#C9CFDA] text-[15px]">以新書《把資歷變資產》的 G.A.M.E. 職涯資產法則為架構，適合急需培養「資產型人才」的企業或組織。</p>
-          <p class="mt-2 text-[#9AA3B5] text-sm">1.5～2 小時。</p>
-          <ul class="mt-6 flex flex-col gap-3 text-[15px] flex-1">
-            <li class="flex gap-3"><span class="num text-[#D4AF37] font-bold w-5 shrink-0">G</span><span>Gauge 評估籌碼</span></li>
-            <li class="flex gap-3"><span class="num text-[#D4AF37] font-bold w-5 shrink-0">A</span><span>Allocate 配置組合</span></li>
-            <li class="flex gap-3"><span class="num text-[#D4AF37] font-bold w-5 shrink-0">M</span><span>Multiply 倍增估值</span></li>
-            <li class="flex gap-3"><span class="num text-[#D4AF37] font-bold w-5 shrink-0">E</span><span>Expand 自動擴張</span></li>
-          </ul>
-          <p class="mt-6 text-sm text-[#9AA3B5]">費用依時數與場地報價</p>
-          <a href="https://speech.elites888.com/" target="_blank" rel="noopener" class="btn-ghost mt-4 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2 font-bold">邀約專題演講 <i data-lucide="arrow-up-right" class="w-5 h-5 text-[#D4AF37]"></i></a>
-        </article>
-
-        <article class="relative rounded-3xl p-[2px] order-1 lg:order-2 bg-gradient-to-b from-[#F7E7A6] via-[#D4AF37] to-[#F59E0B] shadow-[0_0_80px_-20px_rgba(245,158,11,.6)] lg:-mt-4 lg:mb-[-1rem] min-w-0">
-          <div class="h-full rounded-[22px] bg-gradient-to-b from-[#1A1408] to-[#0E1018] p-6 sm:p-8 flex flex-col">
-            <span class="self-start text-xs font-bold tracking-[.15em] px-3 py-1 rounded-full btn-gold">⭐ 首選方案</span>
-            <h3 class="mt-5 font-serif font-bold text-2xl leading-snug">企業內訓工作坊</h3>
-            <p class="mt-3 text-[#F5EEDC] text-[15px]">目的：讓業績不再只靠少數人撐著，把優秀員工的經驗變成團隊的標準，打造能自己運轉、交得出去的團隊。</p>
-            <p class="mt-2 text-[#C9CFDA] text-sm">半日或全日。適合主管與業務團隊。</p>
-            <p class="mt-6 text-xs tracking-[.2em] text-[#D4AF37]">核心產出</p>
-            <ul class="mt-3 flex flex-col gap-3 text-[15px] flex-1">
-              <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i><span>建立「資產型人才」觀念、<br class="sm:hidden">團隊七大資產盤點表</span></li>
-              <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i>NLP 複製卓越策略</li>
-              <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i>90 日團隊行動計畫</li>
-            </ul>
-            <p class="mt-6 text-sm text-[#C9CFDA]">依參訓人數與時數報價</p>
-            <a href="https://speech.elites888.com/" target="_blank" rel="noopener" class="btn-gold mt-4 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2">洽詢企業內訓 <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
-          </div>
-        </article>
-
-        <article class="glass rounded-3xl p-6 sm:p-8 flex flex-col order-3 min-w-0">
-          <span class="self-start text-xs tracking-[.15em] px-3 py-1 rounded-full border border-[#D4AF37]/40 text-[#D4AF37]">50 人企業特選方案</span>
-          <h3 class="mt-5 font-serif font-bold text-2xl leading-snug">優秀員工特質解讀<br>免費體驗</h3>
-          <p class="mt-3 text-[#9AA3B5] text-[15px]">7 分鐘評測，1 次免費 1 對 1 線上解讀。先看見一位關鍵成員的行為模式，再決定下一步。</p>
-          <ul class="mt-6 flex flex-col gap-3 text-[15px] flex-1">
-            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i>38 年、1,000 萬+ 實證數據</li>
-            <li class="flex gap-3"><i data-lucide="check" class="w-5 h-5 text-[#D4AF37] shrink-0 mt-0.5"></i>AI 教練報告：告訴主管該怎麼帶這個人</li>
-            <li class="flex gap-3 rounded-xl bg-[#F59E0B]/10 border border-[#F59E0B]/30 px-3 py-2.5"><i data-lucide="gift" class="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5"></i><span><span class="ph">決定採用 OAD</span><span class="ph">人財動態管理工具後，</span><strong class="ph">工作坊免費</strong></span></li>
-          </ul>
-          <p class="mt-6 text-sm text-[#9AA3B5]">免費</p>
-          <a href="https://oad.elites888.com/#booking" target="_blank" rel="noopener" class="btn-ghost mt-4 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2 font-bold">直接預約免費體驗 <i data-lucide="arrow-up-right" class="w-5 h-5 text-[#D4AF37]"></i></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FAQ ============ -->
-  <section id="faq" class="gutter py-20 md:py-24 border-t border-white/5">
-    <div class="max-w-3xl mx-auto">
-      <div class="text-center">
-        <p class="eyebrow mb-4">FAQ</p>
-        <h2 class="font-serif font-bold text-3xl sm:text-4xl">常見問題</h2>
-      </div>
-      <div class="mt-10 flex flex-col gap-3">
-        <details class="glass rounded-2xl px-6 py-5">
-          <summary class="flex items-center justify-between gap-4 font-bold"><span class="ph">優秀員工不願意分享自己的撇步，</span><span class="ph">怎麼辦？</span><i data-lucide="chevron-down" class="chev w-5 h-5 text-[#D4AF37] shrink-0"></i></summary>
-          <p class="mt-4 text-[#9AA3B5] leading-[1.9]">這是企業主最常提出的顧慮，也很正常：把做法交出來，員工會擔心自己被取代。工作坊會從優秀員工自己在乎的事出發，讓分享經驗對他本人也有價值，而不是靠老闆要求。</p>
-        </details>
-        <details class="glass rounded-2xl px-6 py-5">
-          <summary class="flex items-center justify-between gap-4 font-bold">費用怎麼計算？<i data-lucide="chevron-down" class="chev w-5 h-5 text-[#D4AF37] shrink-0"></i></summary>
-          <p class="mt-4 text-[#9AA3B5] leading-[1.9]">依參訓人數、時數（演講／半日／全日）、授課地點與客製程度報價。填寫合作邀約表單後，會在 48 小時內與您聯繫，確認需求與檔期。</p>
-        </details>
-        <details class="glass rounded-2xl px-6 py-5">
-          <summary class="flex items-center justify-between gap-4 font-bold">內容可以依我們的產業客製嗎？<i data-lucide="chevron-down" class="chev w-5 h-5 text-[#D4AF37] shrink-0"></i></summary>
-          <p class="mt-4 text-[#9AA3B5] leading-[1.9]">可以。課前會先了解貴公司的產業特性、組織架構與目前最想解決的人才問題，再調整案例與演練內容，讓主管上完課就能直接用在自己的團隊。</p>
-        </details>
-        <details class="glass rounded-2xl px-6 py-5">
-          <summary class="flex items-center justify-between gap-4 font-bold">公司規模不大，也適合嗎？<i data-lucide="chevron-down" class="chev w-5 h-5 text-[#D4AF37] shrink-0"></i></summary>
-          <p class="mt-4 text-[#9AA3B5] leading-[1.9]">適合。工作坊本身能產出三大成果，不需要搭配任何系統。50 人以上的企業，因管理相對複雜，建議搭配 OAD，可以先預約一次優秀員工特質解讀免費體驗；決定採用 OAD 人財動態管理工具後，工作坊免費。</p>
-        </details>
-        <details class="glass rounded-2xl px-6 py-5">
-          <summary class="flex items-center justify-between gap-4 font-bold">跟一般的主管訓練有什麼不同？<i data-lucide="chevron-down" class="chev w-5 h-5 text-[#D4AF37] shrink-0"></i></summary>
-          <p class="mt-4 text-[#9AA3B5] leading-[1.9]">多數訓練只從公司的角度要求員工。這場工作坊同時站在經營者與員工兩邊：從經營層的資源配置看企業要什麼，也從員工的三層痛點看他們真正在乎什麼，再用 NLP 複製卓越策略，把優秀員工的做法變成整個團隊學得會的方法。</p>
-        </details>
-        <details class="glass rounded-2xl px-6 py-5">
-          <summary class="flex items-center justify-between gap-4 font-bold">計算機的數字代表什麼？<i data-lucide="chevron-down" class="chev w-5 h-5 text-[#D4AF37] shrink-0"></i></summary>
-          <p class="mt-4 text-[#9AA3B5] leading-[1.9]">計算機以「月薪 × 隱形成本月數 × 人數」估算人才錯位的成本，用來幫助經營者把看不見的損失具體化。實際金額因產業、職位與公司規模而異，數字僅供參考。</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ FINAL CTA + FOOTER ============ -->
-  <section class="gutter pb-16">
-    <div class="max-w-6xl mx-auto glass-gold rounded-3xl px-6 py-12 sm:px-12 text-center relative overflow-hidden">
-      <div class="aura w-80 h-80 bg-[#F59E0B]/20 -bottom-32 left-1/2 -translate-x-1/2"></div>
-      <h2 class="relative font-serif font-bold text-2xl sm:text-3xl leading-snug">老闆不在也能運作的團隊，<span class="gold-text">才是公司真正的資產。</span></h2>
-      <div class="relative mt-8 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="https://speech.elites888.com/" target="_blank" rel="noopener" class="btn-gold rounded-full px-8 py-4 inline-flex items-center justify-center gap-2 sm:min-w-[15rem]">洽詢企業內訓 <i data-lucide="arrow-right" class="w-5 h-5"></i></a>
-        <a href="https://speech.elites888.com/" target="_blank" rel="noopener" class="btn-ghost rounded-full px-8 py-4 inline-flex items-center justify-center gap-2 font-bold sm:min-w-[15rem]">邀約專題演講 <i data-lucide="arrow-right" class="w-5 h-5 text-[#D4AF37]"></i></a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="gutter py-10 border-t border-white/5">
-    <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-4 text-sm text-[#6B7385]">
-      <p>© 2026 Ginger 林逸蓁 ・ 職感菁英學院 ・《把資歷變資產》. All rights reserved.</p>
-      <p>OAD 相關專利、科學模型與評測系統之智慧財產權均屬 OAD 原廠所有。</p>
-    </div>
-  </footer>
-
-  <div id="mcta" class="md:hidden fixed left-0 right-0 bottom-0 z-40 border-t border-[#D4AF37]/30 bg-[#0B0F19]/90 backdrop-blur-md" style="padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-top: 10px; padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));">
-    <a href="#plans" class="btn-gold rounded-full py-3 flex items-center justify-center gap-2 text-sm">查看企業合作方案</a>
-  </div>
-  <div class="md:hidden h-16"></div>
+<!-- 頂部導覽列 HEADER -->
+<header class="site-nav">
+<div class="wrap nav-inner">
+<div class="brand">
+<img alt="OAD Logo" class="brand-logo-img" src="oad-logo.png"/>
+<span class="brand-tag"><span class="phw"><span class="ph">企業動態人財戰略</span> <span class="ph">｜ 扶輪社 ＆ BNI 專案</span></span></span>
 </div>
-
-
-<script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.min.js"></script>
+<nav aria-label="全站導覽">
+<ul class="nav-links">
+<li><a href="#hero">首頁</a></li>
+<li><a href="#pains"><span class="phw"><span class="ph">企業痛點</span></span></a></li>
+<li><a href="#calculator"><span class="phw"><span class="ph">內耗試算</span></span></a></li>
+<li><a href="#tracks"><span class="phw"><span class="ph">雙軌合作</span></span></a></li>
+<li><a href="#workshop"><span class="phw"><span class="ph">一日工作坊</span></span></a></li>
+<li><a href="#coach"><span class="phw"><span class="ph">顧問資歷</span></span></a></li>
+</ul>
+</nav>
+<div>
+<a class="btn btn-gold" href="#booking" style="padding: 9px 20px; font-size: 14px;"><span class="phw"><span class="ph">預約專案諮詢</span></span></a>
+</div>
+</div>
+</header>
+<!-- HERO 旗艦首頁區塊 -->
+<section class="hero" id="hero">
+<div class="wrap">
+<div class="hero-badge">
+<span><span class="phw">Rotary ＆ BNI 企業家演講專題 <span class="ph">｜ 中小企業人財戰略解方</span></span></span>
+</div>
+<h1><span class="phw">
+        <span class="ph">別讓員工的年資，</span><span class="ph">變成企業的負債！</span></span><br/><span class="phw">
+        <span class="ph">用行為科學，</span><span class="ph">把團隊每個人的經驗轉化為</span></span><br/>
+<span class="gold-text"><span class="phw"><span class="ph">「可複製的企業資產」</span></span></span>
+</h1>
+<p class="hero-lead">
+        這不是要您立刻花大錢導入一套複雜的軟體！<br/>
+        透過<strong>【企業高階一日實戰工作坊】</strong>，讓決策團隊親身體驗動態人財與標竿複製的威力；<br/>
+        或邀請暢銷書《把資歷變資產》作者 Ginger 顧問進行<strong>【企內專題演講】</strong><span class="phw">，為員工植入自主當責的<span class="ph">資產思維！</span>
+      </span></p>
+<div class="hero-actions">
+<a class="btn btn-gold" href="#tracks" style="font-size: 16px; padding: 14px 32px;"><span class="phw">
+          <span class="ph">探索兩大企業合作方案</span>
+        </span></a>
+<a class="btn btn-outline" href="#calculator" style="font-size: 15px; padding: 14px 28px;"><span class="phw">
+          <span class="ph">算算看：</span><span class="ph">企業一年為錯聘與內耗浪費多少錢？</span>
+        </span></a>
+</div>
+<!-- 4 大關鍵指標 -->
+<div class="hero-features">
+<div class="hero-feat-card">
+<p class="hero-feat-title">科學基底</p>
+<p class="hero-feat-val">
+<span style="color:var(--gold);"><span class="phw"><span class="ph">38 年</span></span></span><span class="phw"> 跨國行<span class="ph">為科學數據</span>
+          </span></p>
+</div>
+<div class="hero-feat-card">
+<p class="hero-feat-title"><span class="phw">打單 <span class="ph">vs 教練</span></span></p>
+<p class="hero-feat-val">
+<span style="color:var(--gold);">雙標竿</span><span class="phw"> 預防晉升<span class="ph">不適任主管</span>
+          </span></p>
+</div>
+<div class="hero-feat-card">
+<p class="hero-feat-title">心態轉換</p>
+<p class="hero-feat-val">
+<span style="color:var(--emerald-light);"><span class="phw"><span class="ph">全員當責</span></span></span><span class="phw"> 把資歷<span class="ph">沉澱為資產</span>
+          </span></p>
+</div>
+<div class="hero-feat-card">
+<p class="hero-feat-title">企業彈性</p>
+<p class="hero-feat-val">
+<span style="color:var(--gold-deep);"><span class="phw"><span class="ph">工作坊 / 內訓</span></span></span><span class="phw"> 零軟<span class="ph">體導入門檻</span>
+          </span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- 痛點拆解：中小企業主最痛的 4 大盲點 -->
+<section class="section" id="pains" style="background: rgba(18, 22, 32, 0.4);">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">The Leadership Dilemma</span>
+<h2 class="section-title"><span class="phw"><span class="ph">中小企業主心中的痛：</span></span><br/><span class="gold-text"><span class="phw"><span class="ph">為什麼花了錢與心力，</span><span class="ph">團隊依然推不動？</span></span></span></h2>
+<p class="section-desc"><span class="phw">
+          身為企業主，您不怕市場競爭，最怕的是把資源砸在看不清的人性試錯上。這四大組織痛點，是否也正悄悄侵蝕您的利<span class="ph">潤與精力？</span>
+        </span></p>
+</div>
+<div class="pain-grid">
+<!-- 痛點 1 -->
+<div class="pain-card">
+<span class="pain-num">01</span>
+<h3><span class="phw"><span class="ph">憑感覺招募，</span><span class="ph">面試看不準</span></span></h3>
+<div class="pain-quote"><span class="phw"><span class="ph">「面試時口才流利、經歷亮眼，</span><span class="ph">進公司三個月才發現根本做不出業績，</span><span class="ph">甚至帶動負面情緒……」</span></span></div>
+<p><span class="phw">
+            傳統履歷只能看出過往職稱，面試只能看出社交談吐。沒有量化的行為科學標竿，每次招募都像是在賭運氣。錯聘一位員工，沉沒成本往往是其半年以上的薪<span class="ph">資與時間！</span>
+          </span></p>
+</div>
+<!-- 痛點 2 -->
+<div class="pain-card">
+<span class="pain-num">02</span>
+<h3><span class="phw"><span class="ph">拔錯主管：</span><span class="ph">損失 Top Closer，</span><span class="ph">換來糟糕 Manager</span></span></h3>
+<div class="pain-quote"><span class="phw"><span class="ph">「把最強的業績戰將升為業務主管，</span><span class="ph">結果他自己跑去搶單、</span><span class="ph">對下屬沒耐心，</span><span class="ph">最後優秀新人全被逼走！」</span></span></div>
+<p><span class="phw">
+            超級銷售（Top Closer）跟業務教練（Sales Manager）是兩種完全不同的底層驅動模式！拔錯主管不僅失去營收金雞母，更會癱瘓整個部門，是中小企業最昂貴的<span class="ph">管理代價。</span>
+          </span></p>
+</div>
+<!-- 痛點 3 -->
+<div class="pain-card">
+<span class="pain-num">03</span>
+<h3><span class="phw"><span class="ph">員工年資變長，</span><span class="ph">卻成了企業的負債</span></span></h3>
+<div class="pain-quote"><span class="phw"><span class="ph">「老員工資歷深、薪水高，</span><span class="ph">卻變成推一下動一下的打卡公務員，</span><span class="ph">開會都在踢皮球……」</span></span></div>
+<p><span class="phw">
+            員工若缺乏「資產型思維」，就會把時間耗損當作工作資歷。資歷越久，包袱越重，不但無法沉澱出組織的標準化 SOP 與戰略資產，反而成為企業推動變革的<span class="ph">最大阻力。</span>
+          </span></p>
+</div>
+<!-- 痛點 4 -->
+<div class="pain-card">
+<span class="pain-num">04</span>
+<h3><span class="phw"><span class="ph">靜態測評貼標籤，</span><span class="ph">主管依然不會帶</span></span></h3>
+<div class="pain-quote"><span class="phw"><span class="ph">「花錢測過 DISC、MBTI，</span><span class="ph">報告厚厚一本丟抽屜；</span><span class="ph">面對下屬時，</span><span class="ph">主管依然不知道下一句該說什麼。」</span></span></div>
+<p><span class="phw">
+            靜態性格測驗無法反映工作壓力和環境變化。「環境在變、人更會變」，管理需要的是動態的「行為科學地圖」與主管 1:1 的輔導實戰話術，而不是抽象的<span class="ph">心理標籤。</span>
+          </span></p>
+</div>
+</div>
+</div>
+</section>
+<!-- 企業人財損失試算機 -->
+<section class="section" id="calculator">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">Hidden Cost Calculator</span>
+<h2 class="section-title"><span class="phw"><span class="ph">算算看：</span><span class="ph">您的企業一年因</span></span><span class="gold-text"><span class="phw"><span class="ph">「錯聘與內耗」</span></span></span><span class="phw"><span class="ph">浪費了多少淨利？</span></span></h2>
+<p class="section-desc"><span class="phw">
+          <span class="ph">評估團隊賦能時，</span><span class="ph">老闆往往只看培訓預算；</span><span class="ph">卻忽略了</span><span class="ph">「試錯、拔錯人、</span><span class="ph">管理內耗」背後驚人的無形沉沒成本！</span>
+        </span></p>
+</div>
+<div class="calculator-box">
+<div class="calc-grid">
+<!-- 左側控制滑桿 -->
+<div>
+<!-- 1. 平均月薪 -->
+<div class="calc-control">
+<div class="calc-header">
+<span class="calc-label"><span class="phw"><span class="ph">關鍵核心職務平均月薪</span></span></span>
+<span class="calc-val"><span id="salaryDisplay"><span class="phw"><span class="ph">60,000</span></span></span> 元</span>
+</div>
+<input class="calc-slider" id="salarySlider" max="150000" min="35000" oninput="calcEnterpriseCost()" step="5000" type="range" value="60000"/>
+<p style="font-size: 11.5px; color: var(--text-muted); margin-top: 4px;"><span class="phw"><span class="ph">業務戰將、</span><span class="phw">中階主管或核心專業幹部之平均<span class="ph">薪資水平。</span></span></span></p>
+</div>
+<!-- 2. 每年錯聘/流動人數 -->
+<div class="calc-control">
+<div class="calc-header">
+<span class="calc-label"><span class="phw"><span class="ph">每年錯聘、</span><span class="ph">不適任或離職人數</span></span></span>
+<span class="calc-val"><span id="mismatchDisplay">3</span> 人</span>
+</div>
+<input class="calc-slider" id="mismatchSlider" max="15" min="1" oninput="calcEnterpriseCost()" step="1" type="range" value="3"/>
+<p style="font-size: 11.5px; color: var(--text-muted); margin-top: 4px;"><span class="phw"><span class="ph">招募進來未達標、</span><span class="ph">磨合失敗或流動之關鍵人力數量。</span></span></p>
+</div>
+<!-- 3. 平均磨合與內耗月數 -->
+<div class="calc-control">
+<div class="calc-header">
+<span class="calc-label"><span class="phw"><span class="ph">每人平均試用、</span><span class="ph">培訓與交接內耗時間</span></span></span>
+<span class="calc-val"><span id="monthsDisplay">4</span> 個月</span>
+</div>
+<input class="calc-slider" id="monthsSlider" max="9" min="2" oninput="calcEnterpriseCost()" step="1" type="range" value="4"/>
+<p style="font-size: 11.5px; color: var(--text-muted); margin-top: 4px;"><span class="phw"><span class="ph">含招募期、</span><span class="ph">新人試用培訓期，</span><span class="ph">以及主管每日救火陪伴工時成本折算。</span></span></p>
+</div>
+</div>
+<!-- 右側計算面板 -->
+<div class="calc-result-panel">
+<div class="calc-result-title">企業每年推估人財沉沒損失</div>
+<div class="calc-result-number">
+              NT$ <span id="totalLossDisplay"><span class="phw"><span class="ph">1,080,000</span></span></span>
+</div>
+<p class="calc-result-sub"><span class="phw">
+              <span class="ph">相當於您每年白白燒掉了一輛進口房車，</span><span class="ph">或必須多做</span> </span><strong><span class="phw"><span class="ph">數百萬至千萬營收</span></span></strong><span class="phw"> 才能補回這筆<span class="ph">純利損失！</span>
+            </span></p>
+<div class="calc-contrast">
+              💡 <strong>投資一場一日實戰工作坊或企內專題演講：</strong><br/>
+              只需幫您預防 <strong>一次拔錯主管</strong> 或 <strong>一位新人錯聘</strong>，就直接為公司現省數十萬至百萬淨利！
+            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 兩大專案合作路徑 (雙軌彈性) -->
+<section class="section" id="tracks" style="background: rgba(18, 22, 32, 0.4);">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">Two Strategic Pathways</span>
+<h2 class="section-title"><span class="phw"><span class="ph">專為企業主設計的</span></span><span class="gold-text"><span class="phw"><span class="ph">雙軌賦能合作方案</span></span></span></h2>
+<p class="section-desc"><span class="phw">
+          無論您的企業規模大小，我們都不強求一開始導入系統。我們提供兼具「高階戰略深度」與「全員心態落地」的<span class="ph">雙重選擇：</span>
+        </span></p>
+</div>
+<div class="tracks-grid">
+<!-- 方案 A：企業版一日實戰工作坊 -->
+<div class="track-card highlight">
+<div>
+<span class="track-badge track-badge-gold"><span class="phw"><span class="ph">路徑 A</span> <span class="ph">｜ 決策團隊實戰體驗</span></span></span>
+<h3><span class="phw"><span class="ph">企業高階動態人財管理一日工作坊</span></span></h3>
+<p class="track-for"><span class="phw"><span class="ph">【深入體驗 OAD 導入價值</span> <span class="ph">｜ 適合 6~15 人核心團隊包班】</span></span></p>
+<p class="track-desc"><span class="phw">
+              不急著簽約導入！由 Ginger 顧問帶領老闆與核心幹部（業務主管、HR主管），親自進行一整天的「組織人財體檢」與「行為科學沙盤演練」，親身體會如何將頂尖業務與教練主管的行為特質<span class="ph">精準複製！</span>
+            </span></p>
+<ul>
+<li><strong><span class="phw"><span class="ph">組織人財資產負債盤點：</span></span></strong><span class="phw">看懂團隊現有成員的真實行為籌<span class="ph">碼與盲點。</span></span></li>
+<li><strong>頂尖打單 vs 教練主管標竿實測：</strong><span class="phw"><span class="ph">以 38 年行為科學數據，</span><span class="ph">現場對標。</span></span></li>
+<li><strong><span class="phw"><span class="ph">主管 1:1 輔導錦囊實戰：</span></span></strong><span class="phw"><span class="ph">現場演練，</span><span class="ph">掌握帶動不同下屬的關鍵對話話術。</span></span></li>
+<li><strong><span class="phw"><span class="ph">產出專屬企業人財行動藍圖：</span></span></strong><span class="phw">帶走一份可落地的 90 日團隊<span class="ph">戰略計畫。</span></span></li>
+</ul>
+</div>
+<div class="track-bottom">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px;">
+<span style="font-size: 13.5px; color: var(--text-muted);">扶輪社 ＆ BNI 企業主專案</span>
+<span style="font-size: 15px; font-weight: 700; color: var(--gold-light);"><span class="phw"><span class="ph">精緻包班 / 專案報價</span></span></span>
+</div>
+<a class="btn btn-gold" href="#booking" style="width: 100%;"><span class="phw"><span class="ph">洽詢一日工作坊包班檔期</span></span></a>
+</div>
+</div>
+<!-- 方案 B：企內專題演講 / 內訓 -->
+<div class="track-card">
+<div>
+<span class="track-badge track-badge-blue"><span class="phw"><span class="ph">路徑 B</span> <span class="ph">｜ 全員心態賦能首選</span></span></span>
+<h3><span class="phw"><span class="ph">企內專題演講：</span><span class="ph">《讓全員成為資產型人才》</span></span></h3>
+<p class="track-for"><span class="phw"><span class="ph">【中小企業極佳切入點</span> <span class="phw">｜ 適合 10~50 人全員或<span class="ph">幹部培訓】</span></span></span></p>
+<p class="track-desc"><span class="phw">
+              就算您的公司規模暫時不需要導入 OAD 系統，也能透過一場 2~3 小時震撼人心的專題演講，為員工灌輸《把資歷變資產》思維，撕掉被動交差的打工心態，激發全員<span class="ph">自主當責！</span>
+            </span></p>
+<ul>
+<li><strong><span class="phw"><span class="ph">打破打工思維：</span></span></strong><span class="phw"><span class="ph">看清為什麼在職場摸魚，</span><span class="ph">損失最大的是員工自己的無形資產。</span></span></li>
+<li><strong><span class="phw"><span class="ph">NLP 內外在對齊：</span></span></strong><span class="phw"><span class="ph">打通願景、</span><span class="ph">信念、</span><span class="ph">能力與日常行動，</span><span class="ph">消除團隊心力內耗。</span></span></li>
+<li><strong><span class="phw"><span class="ph">雙贏資產思維：</span></span></strong><span class="phw"><span class="ph">教導員工把日常解決的難題，</span><span class="ph">沉澱為個人聲譽與企業的獲利護城河。</span></span></li>
+<li><strong><span class="phw"><span class="ph">點燃團隊向心力：</span></span></strong><span class="phw"><span class="ph">大幅降低溝通阻力，</span><span class="ph">讓員工從</span><span class="ph">「要我做」變成</span><span class="ph">「我要做」。</span></span></li>
+</ul>
+</div>
+<div class="track-bottom">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px;">
+<span style="font-size: 13.5px; color: var(--text-muted);">實體 / 線上企業講座 (2~3hr)</span>
+<span style="font-size: 15px; font-weight: 700; color: #60A5FA;"><span class="phw"><span class="ph">企業專案特惠邀約</span></span></span>
+</div>
+<a class="btn btn-outline" href="#booking" style="width: 100%;"><span class="phw"><span class="ph">邀請顧問親臨企業演講</span></span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 一日工作坊精實實戰模組與時程 -->
+<section class="section" id="workshop">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">Workshop Curriculum</span>
+<h2 class="section-title"><span class="phw"><span class="ph">一日工作坊核心大綱：</span></span><br/><span class="gold-text"><span class="phw"><span class="ph">一天看清組織盲點，</span><span class="ph">帶走 4 份落地成果</span></span></span></h2>
+<p class="section-desc"><span class="phw">
+          <span class="ph">拒絕空洞理論！</span>一整天由 Ginger 顧問親自帶領，<span class="ph">結合神經科學與行為數據，</span><span class="ph">現場演練產出：</span>
+        </span></p>
+</div>
+<!-- 4 大實戰模組 -->
+<div class="workshop-modules">
+<div class="module-card">
+<div class="mod-tag">MODULE 01</div>
+<h4><span class="phw"><span class="ph">組織資產負債盤點</span></span></h4>
+<p><span class="phw"><span class="ph">算出企業關鍵團隊的</span><span class="ph">「人財資產淨值」，</span><span class="ph">看清誰在創造槓桿、</span><span class="ph">誰在無形耗損組織心力。</span></span></p>
+</div>
+<div class="module-card">
+<div class="mod-tag">MODULE 02</div>
+<h4><span class="phw"><span class="ph">OAD 行為科學標竿解讀</span></span></h4>
+<p><span class="phw"><span class="ph">撕下主觀偏見，</span><span class="ph">精準對標</span><span class="ph">「打單戰將標竿」與</span><span class="ph">「教練主管標竿」，</span><span class="ph">看透行為驅動模式。</span></span></p>
+</div>
+<div class="module-card">
+<div class="mod-tag">MODULE 03</div>
+<h4><span class="phw"><span class="ph">NLP 主管 1:1 實戰輔導</span></span></h4>
+<p><span class="phw"><span class="ph">掌握行為背後的信念對齊，</span><span class="ph">現場模擬 1:1 溝通錦囊，</span><span class="ph">掌握激勵不同下屬的破局話術。</span></span></p>
+</div>
+<div class="module-card">
+<div class="mod-tag">MODULE 04</div>
+<h4><span class="phw"><span class="ph">90 日團隊作戰地圖</span></span></h4>
+<p><span class="phw"><span class="ph">擬定包含第 30、</span><span class="ph">60、</span><span class="ph">90 天客觀檢核點的落地行動方案，</span><span class="ph">帶著清晰的戰略方向離開會場。</span></span></p>
+</div>
+</div>
+<!-- 精實一日行程規劃表 -->
+<div class="schedule-box">
+<div class="schedule-row">
+<span class="sch-time"><span class="phw"><span class="ph">09:00 - 09:30</span></span></span>
+<span class="sch-title"><span class="phw"><span class="ph">【開場破冰】打破框架：</span><span class="ph">看清組織借用別人定義的盲點</span></span></span>
+<span class="sch-output"><span class="phw"><span class="ph">建立當日實戰共識</span></span></span>
+</div>
+<div class="schedule-row">
+<span class="sch-time">09:30 - 10:45</span>
+<span class="sch-title"><span class="phw"><span class="ph">【組織法說會】人財資產負債表：</span><span class="ph">量化團隊隱形成本與淨值</span></span></span>
+<span class="sch-output"><span class="phw"><span class="ph">產出：</span><span class="ph">組織資產健檢表</span></span></span>
+</div>
+<div class="schedule-row">
+<span class="sch-time">11:00 - 12:15</span>
+<span class="sch-title"><span class="phw"><span class="ph">【行為科學沙盤】解碼 OAD：</span><span class="ph">超級打單 vs 業務主管的驅動差異</span></span></span>
+<span class="sch-output"><span class="phw"><span class="ph">產出：</span><span class="ph">雙重標竿對比模型</span></span></span>
+</div>
+<div class="schedule-row lunch">
+<span class="sch-time"><span class="phw"><span class="ph">12:15 - 13:30</span></span></span>
+<span class="sch-title">【商務午休】精緻午餐與企業主人脈深度交流</span>
+<span style="font-size: 13px; color: var(--text-muted);"><span class="phw"><span class="ph">同行企業主經驗切磋</span></span></span>
+</div>
+<div class="schedule-row">
+<span class="sch-time">13:30 - 15:00</span>
+<span class="sch-title"><span class="phw"><span class="ph">【NLP 從屬等級】由上而下對齊：</span><span class="ph">精神、</span><span class="ph">信念到主管日常行為</span></span></span>
+<span class="sch-output"><span class="phw"><span class="ph">產出：</span><span class="ph">團隊內外對齊指南</span></span></span>
+</div>
+<div class="schedule-row">
+<span class="sch-time">15:15 - 16:30</span>
+<span class="sch-title"><span class="phw"><span class="ph">【實戰演練】主管 1:1 輔導錦囊：</span><span class="ph">如何與不同特質員工精準對話</span></span></span>
+<span class="sch-output"><span class="phw"><span class="ph">產出：</span><span class="ph">實戰對話腳本話術</span></span></span>
+</div>
+<div class="schedule-row">
+<span class="sch-time">16:30 - 17:30</span>
+<span class="sch-title"><span class="phw">【落地閉環】S.C.A.N. 90 日作戰藍圖：<span class="ph">把一日收穫化為長期資產</span></span></span>
+<span class="sch-output"><span class="phw"><span class="ph">產出：</span><span class="ph">90 日作戰落地地圖</span></span></span>
+</div>
+</div>
+</div>
+</section>
+<!-- 顧問介紹區塊 (Ginger 顧問) -->
+<section class="section" id="coach" style="background: rgba(18, 22, 32, 0.4);">
+<div class="wrap">
+<div class="coach-card">
+<div class="coach-photo-wrap">
+<img alt="Ginger Lin 林逸蓁 顧問" class="coach-photo" src="ginger.jpg"/>
+<h3 class="coach-name"><span class="phw"><span class="ph">Ginger Lin 林逸蓁</span></span></h3>
+<p class="coach-sub"><span class="phw"><span class="ph">商管組織暢銷書</span><span class="ph">《把資歷變資產》作者</span></span></p>
+<div style="margin-top: 8px;">
+<span style="display: inline-block; padding: 2px 10px; font-size: 11px; font-weight: 700; color: #0A0C10; background: linear-gradient(135deg, #D4AF37, #B88E28); border-radius: 4px;"><span class="phw"><span class="ph">OAD 亞洲合作夥伴</span></span></span>
+</div>
+</div>
+<div>
+<span class="eyebrow">Enterprise Coach</span>
+<h2 style="font-size: 28px; margin-bottom: 12px;"><span class="phw"><span class="ph">獨家結合</span><span class="ph">「大腦神經科學 NLP 實戰」與</span><span class="ph">「行為數據」</span></span></h2>
+<p style="font-size: 15px; color: var(--text-body); line-height: 1.8; margin-bottom: 16px;"><span class="phw">
+            跨足外商與大型企業人力資源超過 20 年，並深度融合全球破億大師 Dan Lok 體系與 ABNLP 神經語言程式學。Ginger 顧問深知中小企業主「沒時間摸索、需要即刻見效」的實戰痛點，專注將複雜的行為科學與心理學，轉化為老闆與主管「一聽就懂、明天就能用」的成交與<span class="ph">管理工具！</span>
+          </span></p>
+<ul class="coach-creds">
+<li><strong><span class="phw"><span class="ph">商管暢銷作家：</span></span></strong><span class="phw"><span class="ph">商業組織類暢銷排行</span><span class="ph">《把資歷變資產》作者</span></span></li>
+<li><strong><span class="phw"><span class="ph">國際原廠認證：</span></span></strong><span class="phw">人財動態管理 OAD 亞洲合作推廣夥伴 <span class="ph">｜ 高單價成交實戰教練</span></span></li>
+<li><strong><span class="phw"><span class="ph">專業資格認證：</span></span></strong><span class="phw">HRCI 全球人力資源管理師（<span class="ph">GPHR®）認證</span></span></li>
+<li><strong><span class="phw"><span class="ph">NLP 專業教練：</span></span></strong><span class="phw">美國 ABNLP 神經語言程式學<span class="ph">專業執行師</span></span></li>
+<li><strong><span class="phw"><span class="ph">國家專業證照：</span></span></strong><span class="phw">勞動部就業服務乙級技術士（就業服務<span class="ph">專業人員）</span></span></li>
+</ul>
+<div style="display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px;">
+<a class="btn btn-gold" href="#booking" style="padding: 10px 24px; font-size: 14px;"><span class="phw"><span class="ph">預約顧問專屬洽談</span></span></a>
+<a class="btn btn-outline" href="https://line.me/ti/p/~@elites888" rel="noopener" style="padding: 10px 24px; font-size: 14px; color: #4cd964; border-color: rgba(76, 217, 100, 0.4);" target="_blank"><span class="phw">
+              <span class="ph">LINE 專人諮詢：</span><span class="ph">@elites888</span>
+            </span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 預約表單區塊 -->
+<section class="section booking-section" id="booking">
+<div class="wrap">
+<div class="section-head">
+<span class="eyebrow">Executive Consultation</span>
+<h2 class="section-title"><span class="phw"><span class="ph">扶輪社 ＆ BNI 企業主專案預約</span></span></h2>
+<p class="section-desc"><span class="phw">
+          請填寫以下資訊，顧問團隊將在 24 小時內與您聯繫，協助安排 30 分鐘線上面談或企內演講<span class="ph">細節討論：</span>
+        </span></p>
+</div>
+<div class="booking-form-box">
+<form action="https://formsubmit.co/gingerlin0919@gmail.com" id="consultForm" method="POST">
+<!-- FormSubmit 自動化配置 -->
+<input name="_subject" type="hidden" value="【扶輪社/BNI企業主專案】工作坊與演講預約申請"/>
+<input name="_captcha" type="hidden" value="false"/>
+<input name="_template" type="hidden" value="table"/>
+<div class="form-grid">
+<div class="form-group">
+<label for="f-name">您的姓名 *</label>
+<input id="f-name" name="name" placeholder="例如：王大明 董事長" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="f-company">公司名稱 *</label>
+<input id="f-company" name="company" placeholder="例如：宏達實業股份有限公司" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="f-club"><span class="phw">所屬分會 / <span class="ph">社別 *</span></span></label>
+<input id="f-club" name="club_affiliation" placeholder="例如：台北扶輪社 / BNI 卓越分會" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="f-title">職稱 *</label>
+<input id="f-title" name="title" placeholder="例如：創辦人 / 總經理 / 營運長" required="" type="text"/>
+</div>
+<div class="form-group">
+<label for="f-phone">聯絡手機 *</label>
+<input id="f-phone" name="phone" placeholder="例如：0912-345-678" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="f-email"><span class="phw">公司 <span class="ph">Email *</span></span></label>
+<input id="f-email" name="email" placeholder="例如：ceo@company.com" required="" type="email"/>
+</div>
+<div class="form-group full">
+<label for="f-plan"><span class="phw">目前最感興趣的合<span class="ph">作方案 *</span></span></label>
+<select id="f-plan" name="interested_plan" required="">
+<option value="">請選擇感興趣的方案</option>
+<option value="企業高階一日實戰工作坊（高階主管包班/深入體驗OAD）">方案 A ｜ 企業高階一日實戰工作坊（高階主管包班 / 深入體驗 OAD）</option>
+<option value="企內專題演講（全員成為資產型人才 / 2~3小時）">方案 B ｜ 企內專題演講《全員成為資產型人才》（2~3 小時實體/線上）</option>
+<option value="1對1企業人財現況顧問諮詢（30分鐘線上解讀）">方案 C ｜ 1 對 1 企業人財現況顧問諮詢（30 分鐘線上面談）</option>
+<option value="其他客製化企業賦能方案">其他客製化企業賦能方案</option>
+</select>
+</div>
+<div class="form-group full">
+<label for="f-pain"><span class="phw">貴公司目前最棘手的人財或<span class="ph">團隊痛點？</span></span></label>
+<textarea id="f-pain" name="company_challenge" placeholder="例如：業務戰將升主管後帶不動團隊；或招募面試看不準、員工缺乏主動性……" rows="3"></textarea>
+</div>
+<div class="form-group full" style="margin-top: 10px;">
+<button class="btn btn-gold" id="submitBtn" style="width: 100%; padding: 15px; font-size: 16px;" type="submit">
+                送出申請並預約專屬諮詢
+              </button>
+</div>
+</div>
+<div class="form-msg success" id="formMsgSuccess"><span class="phw">
+            <span class="ph">✓ 已成功送出申請！</span>Ginger 顧問團隊將在 24 小時內親自與您聯繫確認。
+          </span></div>
+<div class="form-msg error" id="formMsgError"><span class="phw">
+            <span class="ph">送出時發生問題，</span><span class="ph">麻煩直接加入 LINE 客服諮詢：</span><span class="ph">@elites888，</span><span class="ph">我們將即刻為您服務。</span>
+          </span></div>
+</form>
+</div>
+</div>
+</section>
+<!-- 頁尾 FOOTER (雙品牌尊榮高清呈獻) -->
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-inner">
+<!-- 雙品牌標誌 -->
+<div class="footer-brand-wrap">
+<!-- OAD 原廠標誌 -->
+<div style="display: flex; align-items: center; gap: 14px;">
+<div class="footer-logo-card">
+<img alt="OAD Organization Analysis &amp; Design" class="footer-logo-img" src="oad-logo.png"/>
+</div>
+<div>
+<h4 style="font-size: 16px; color: #FFFFFF; font-weight: 700; margin-bottom: 2px;">OAD<span style="color:var(--gold);">.ai</span></h4>
+<p style="font-size: 12px; color: var(--text-muted); margin: 0;"><span class="phw">行為科學驅動的動態人<span class="ph">財管理系統</span></span></p>
+</div>
+</div>
+<!-- 分隔線 -->
+<div style="width: 1px; height: 42px; background: rgba(212, 175, 55, 0.3); margin: 0 4px;"></div>
+<!-- 亞洲合作夥伴：職感菁英學院 -->
+<div style="display: flex; align-items: center; gap: 14px;">
+<div class="footer-logo-card" style="padding: 4px; border-radius: 8px; background: rgba(255, 255, 255, 0.03);">
+<img alt="職感菁英學院 THE ELITE ACADEMY" class="footer-logo-img" src="elite-academy-logo.png" style="height: 52px; width: 52px; border-radius: 6px; object-fit: cover;"/>
+</div>
+<div>
+<div style="display: inline-block; padding: 4px 10px; font-size: 12px; font-weight: 700; color: #0A0C10; background: linear-gradient(135deg, #D4AF37, #B88E28); border-radius: 4px; letter-spacing: 0.5px;">亞洲合作夥伴</div>
+</div>
+</div>
+</div>
+<!-- 頁尾快速導覽 -->
+<nav aria-label="頁尾導覽">
+<ul class="nav-links" style="display: flex; gap: 20px;">
+<li><a href="#hero">首頁</a></li>
+<li><a href="#pains"><span class="phw"><span class="ph">企業痛點</span></span></a></li>
+<li><a href="#calculator"><span class="phw"><span class="ph">內耗試算</span></span></a></li>
+<li><a href="#tracks"><span class="phw"><span class="ph">雙軌合作</span></span></a></li>
+<li><a href="#workshop"><span class="phw"><span class="ph">一日工作坊</span></span></a></li>
+<li><a href="#coach"><span class="phw"><span class="ph">顧問資歷</span></span></a></li>
+</ul>
+</nav>
+</div>
+<!-- 頁尾版權與認證資訊 -->
+<div class="footer-bottom">
+<p>本站為 OAD（Organization Analysis &amp; Design）亞洲合作夥伴「職感菁英學院」之企業專案專題頁。<br/><span class="phw">國際專利、科學模型與評測系統之智慧財產權均屬 OAD <span class="ph">原廠所有。</span></span></p>
+<p style="margin: 0; color: var(--gold-light); font-size: 14px;">
+<strong>LINE 客服諮詢：</strong><a href="https://line.me/ti/p/~@elites888" rel="noopener" style="color: #4cd964; font-weight: 700; text-decoration: underline;" target="_blank">@elites888</a> ｜ 
+          <strong>顧問諮詢 Email：</strong><a href="mailto:gingerlin0919@gmail.com" style="color: var(--text-body); text-decoration: underline;">gingerlin0919@gmail.com</a>
+</p>
+<p style="margin: 0; font-size: 12px; color: var(--text-muted);"><span class="phw">
+          <span class="ph">人財動態管理 OAD 亞洲合作夥伴</span> <span class="ph">｜ 商管暢銷書</span><span class="ph">《把資歷變資產》作者</span>
+        </span></p>
+<p style="margin: 0; font-size: 12px; color: var(--text-muted);"><span class="phw">
+          © 2026 OAD Taiwan &amp; 職感菁英學院. All rights <span class="ph">reserved.</span>
+        </span></p>
+</div>
+</div>
+</footer>
+<!-- 浮動預約按鈕 -->
+<div class="sticky-cta">
+<a class="btn btn-gold" href="#booking" style="box-shadow: 0 8px 24px rgba(0,0,0,0.6);"><span class="phw">
+      <span class="ph">預約企業專案諮詢</span>
+    </span></a>
+</div>
+<!-- 計算器與表單 AJAX JS -->
 <script>
-  (function () {
-    try { if (window.lucide) lucide.createIcons(); } catch (e) {}
-    var fmt = function (n) { return Math.round(n).toLocaleString('zh-TW'); };
-    var pairs = [['sal','salN'],['ppl','pplN'],['mul','mulN']];
-    var lossWrap = document.getElementById('lossWrap');
-    var last = null;
-    function paint(r) { r.style.setProperty('--p', ((r.value - r.min) / (r.max - r.min) * 100) + '%'); }
-    function calc() {
-      var sal = +document.getElementById('sal').value;
-      var ppl = +document.getElementById('ppl').value;
-      var mul = +document.getElementById('mul').value;
-      var loss = sal * mul * ppl;
-      document.getElementById('loss').textContent = fmt(loss);
-      document.getElementById('fSal').textContent = fmt(sal);
-      document.getElementById('fMul').textContent = mul;
-      document.getElementById('fPpl').textContent = ppl;
-      document.getElementById('threeYear').textContent = fmt(loss * 3);
-      document.getElementById('headcount').textContent = (loss * 3 / (sal * 12)).toFixed(1);
-      if (last !== null && last !== loss) { lossWrap.classList.remove('bump'); void lossWrap.offsetWidth; lossWrap.classList.add('bump'); }
-      last = loss;
+    // 企業人財損失試算邏輯
+    function calcEnterpriseCost() {
+      const salary = parseInt(document.getElementById('salarySlider').value);
+      const mismatchCount = parseInt(document.getElementById('mismatchSlider').value);
+      const months = parseInt(document.getElementById('monthsSlider').value);
+
+      document.getElementById('salaryDisplay').innerText = salary.toLocaleString();
+      document.getElementById('mismatchDisplay').innerText = mismatchCount;
+      document.getElementById('monthsDisplay').innerText = months;
+
+      // 錯聘成本估算模型：
+      // (月薪 * 內耗月數 * 1.5 倍綜合管理與機會成本) * 錯聘人數
+      const totalLoss = Math.round((salary * months * 1.5) * mismatchCount);
+      document.getElementById('totalLossDisplay').innerText = totalLoss.toLocaleString();
     }
-    pairs.forEach(function (pr) {
-      var r = document.getElementById(pr[0]), n = document.getElementById(pr[1]);
-      n.value = r.value; paint(r);
-      r.addEventListener('input', function () { n.value = r.value; paint(r); calc(); });
-      n.addEventListener('input', function () { var v = parseFloat(n.value); if (isNaN(v)) return; r.value = Math.min(+r.max, Math.max(+r.min, v)); paint(r); calc(); });
-      n.addEventListener('change', function () { n.value = r.value; });
+
+    // 初始化計算器
+    calcEnterpriseCost();
+
+    // 表單 AJAX 送出
+    const form = document.getElementById('consultForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const msgSuccess = document.getElementById('formMsgSuccess');
+    const msgError = document.getElementById('formMsgError');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      const originalText = submitBtn.innerText;
+      submitBtn.disabled = true;
+      submitBtn.innerText = '正在傳送預約申請...';
+      msgSuccess.style.display = 'none';
+      msgError.style.display = 'none';
+
+      const formData = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          msgSuccess.style.display = 'block';
+          form.reset();
+          submitBtn.innerText = '申請已成功送出！';
+          msgSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          msgError.style.display = 'block';
+          submitBtn.disabled = false;
+          submitBtn.innerText = originalText;
+        }
+      })
+      .catch(error => {
+        msgError.style.display = 'block';
+        submitBtn.disabled = false;
+        submitBtn.innerText = originalText;
+      });
     });
-    calc();
-  })();
-</script>
+  </script>
 </body>
 </html>
